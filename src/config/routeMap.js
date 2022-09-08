@@ -24,6 +24,20 @@ const Error404 = Loadable({loader: () => import(/*webpackChunkName:'Error404'*/'
 const User = Loadable({loader: () => import(/*webpackChunkName:'User'*/'@/views/user'),loading: Loading});
 const About = Loadable({loader: () => import(/*webpackChunkName:'About'*/'@/views/about'),loading: Loading});
 const Bug = Loadable({loader: () => import(/*webpackChunkName:'Bug'*/'@/views/bug'),loading: Loading});
+/* sandy-chain */
+/* blockchain */
+const BlockInfo = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/blockchain/blockinfo'),loading: Loading});
+const TxInfo = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/blockchain/txinfo'),loading: Loading});
+const NetInfo = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/blockchain/netinfo'),loading: Loading});
+const ActiveUser = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/blockchain/active-user'),loading: Loading});
+/* log */
+const Overview = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/log/overview/line.jsx'),loading: Loading});
+const AlertInfo = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/log/alert-info'),loading: Loading});
+const TamperProtection = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/log/tamper-protection'),loading: Loading});
+const Retrive = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/log/retrieve'),loading: Loading});
+/* tokoin */
+const PermissionDisplay = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/tokoin/permission/display'),loading: Loading});
+const PermissionOperate = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/tokoin/permission/operate'),loading: Loading});
 
 export default [
   { path: "/dashboard", component: Dashboard, roles: ["admin","editor","guest"] },
@@ -50,4 +64,19 @@ export default [
   { path: "/about", component: About, roles: ["admin", "editor", "guest"] },
   { path: "/bug", component: Bug, roles: ["admin"] },
   { path: "/error/404", component: Error404 },
+  /* sandy-chain */
+  /* blockchain */
+  { path: "/sandychain/blockchain/display", component: Error404 },
+  { path: "/sandychain/blockchain/blockinfo", component: BlockInfo },
+  { path: "/sandychain/blockchain/txinfo", component: TxInfo },
+  { path: "/sandychain/blockchain/netinfo", component: NetInfo },
+  { path: "/sandychain/blockchain/active-user", component: ActiveUser },
+  /* log */
+  { path: "/sandychain/log/overview", component: Overview },
+  { path: "/sandychain/log/alert-info", component: AlertInfo },
+  { path: "/sandychain/log/tamper-protection", component: TamperProtection },
+  { path: "/sandychain/log/retrieve", component: Retrive },
+  /* tokoin */
+  { path: "/sandychain/tokoin/permission/display", component: PermissionDisplay },
+  { path: "/sandychain/tokoin/permission/operate", component: PermissionOperate },
 ];

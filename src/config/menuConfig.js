@@ -10,173 +10,88 @@ const menuList = [
     roles:["admin","editor","guest"]
   },
   {
-    title: "作者博客",
-    path: "/doc",
-    icon: "file",
-    roles:["admin","editor","guest"]
-  },
-  {
     title: "引导页",
     path: "/guide",
     icon: "key",
     roles:["admin","editor"]
   },
   {
-    title: "权限测试",
-    path: "/permission",
+    title: "区块链",
+    path: "/sandy-chain/blockchain",
     icon: "lock",
     children: [
       {
-        title: "权限说明",
-        path: "/permission/explanation",
+        title: "实时区块展示",
+        path: "/sandychain/blockchain/display",
         roles:["admin"]
       },
       {
-        title: "admin页面",
-        path: "/permission/adminPage",
+        title: "区块详细信息",
+        path: "/sandychain/blockchain/blockinfo",
         roles:["admin"]
       },
       {
-        title: "guest页面",
-        path: "/permission/guestPage",
+        title: "交易详细信息",
+        path: "/sandychain/blockchain/txinfo",
+        roles:["admin"]
+      },
+      {
+        title: "链网络信息",
+        path: "/sandychain/blockchain/netinfo",
         roles:["guest"]
       },
       {
-        title: "editor页面",
-        path: "/permission/editorPage",
+        title: "最近活跃用户",
+        path: "/sandychain/blockchain/active-user",
         roles:["editor"]
       },
     ],
   },
   {
-    title: "组件",
-    path: "/components",
+    title: "日志防篡改",
+    path: "/sandychain/log",
     icon: "appstore",
     roles:["admin","editor"],
     children: [
       {
-        title: "富文本",
-        path: "/components/richTextEditor",
+        title: "日志概览",
+        path: "/sandychain/log/overview",
         roles:["admin","editor"],
       },
       {
-        title: "Markdown",
-        path: "/components/Markdown",
+        title: "日志告警",
+        path: "/sandychain/log/alert-info",
         roles:["admin","editor"],
       },
       {
-        title: "拖拽列表",
-        path: "/components/draggable",
+        title: "日志篡改保护",
+        path: "/sandychain/log/tamper-protection",
+        roles:["admin","editor"],
+      },
+      {
+        title: "日志检索",
+        path: "/sandychain/log/retrieve",
         roles:["admin","editor"],
       },
     ],
   },
   {
-    title: "图表",
-    path: "/charts",
+    title: "Tokoin访问控制",
+    path: "/sandychain/tokoin",
     icon: "area-chart",
     roles:["admin","editor"],
     children: [
       {
-        title: "键盘图表",
-        path: "/charts/keyboard",
+        title: "权限展示",
+        path: "/sandychain/tokoin/permission/display",
         roles:["admin","editor"],
       },
       {
-        title: "折线图",
-        path: "/charts/line",
-        roles:["admin","editor"],
-      },
-      {
-        title: "混合图表",
-        path: "/charts/mix-chart",
+        title: "权限操作",
+        path: "/sandychain/tokoin/permission/operate",
         roles:["admin","editor"],
       },
     ],
-  },
-  {
-    title: "路由嵌套",
-    path: "/nested",
-    icon: "cluster",
-    roles:["admin","editor"],
-    children: [
-      {
-        title: "菜单1",
-        path: "/nested/menu1",
-        children: [
-          {
-            title: "菜单1-1",
-            path: "/nested/menu1/menu1-1",
-            roles:["admin","editor"],
-          },
-          {
-            title: "菜单1-2",
-            path: "/nested/menu1/menu1-2",
-            children: [
-              {
-                title: "菜单1-2-1",
-                path: "/nested/menu1/menu1-2/menu1-2-1",
-                roles:["admin","editor"],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: "表格",
-    path: "/table",
-    icon: "table",
-    roles:["admin","editor"]
-  },
-  {
-    title: "Excel",
-    path: "/excel",
-    icon: "file-excel",
-    roles:["admin","editor"],
-    children: [
-      {
-        title: "导出Excel",
-        path: "/excel/export",
-        roles:["admin","editor"]
-      },
-      {
-        title: "上传Excel",
-        path: "/excel/upload",
-        roles:["admin","editor"]
-      }
-    ],
-  },
-  {
-    title: "Zip",
-    path: "/zip",
-    icon: "file-zip",
-    roles:["admin","editor"]
-  },
-  {
-    title: "剪贴板",
-    path: "/clipboard",
-    icon: "copy",
-    roles:["admin","editor"]
-  },
-  {
-    title: "用户管理",
-    path: "/user",
-    icon: "usergroup-add",
-    roles:["admin"]
-  },
-  {
-    title: "关于作者",
-    path: "/about",
-    icon: "user",
-    roles:["admin","editor","guest"]
-  },
-  {
-    title: "Bug收集",
-    path: "/bug",
-    icon: "bug",
-    roles:["admin"]
   },
 ];
 export default menuList;

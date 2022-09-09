@@ -26,12 +26,13 @@ const About = Loadable({loader: () => import(/*webpackChunkName:'About'*/'@/view
 const Bug = Loadable({loader: () => import(/*webpackChunkName:'Bug'*/'@/views/bug'),loading: Loading});
 /* sandy-chain */
 /* blockchain */
+const Display = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/blockchain/display'),loading: Loading});
 const BlockInfo = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/blockchain/blockinfo'),loading: Loading});
 const TxInfo = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/blockchain/txinfo'),loading: Loading});
 const NetInfo = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/blockchain/netinfo'),loading: Loading});
 const ActiveUser = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/blockchain/active-user'),loading: Loading});
 /* log */
-const Overview = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/log/overview/line.jsx'),loading: Loading});
+const Overview = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/log/overview'),loading: Loading});
 const AlertInfo = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/log/alert-info'),loading: Loading});
 const TamperProtection = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/log/tamper-protection'),loading: Loading});
 const Retrive = Loadable({loader: () => import(/*webpackChunkName:'Table'*/'@/views/sandy-chain/log/retrieve'),loading: Loading});
@@ -66,7 +67,7 @@ export default [
   { path: "/error/404", component: Error404 },
   /* sandy-chain */
   /* blockchain */
-  { path: "/sandychain/blockchain/display", component: Error404 },
+  { path: "/sandychain/blockchain/display", component: Display },
   { path: "/sandychain/blockchain/blockinfo", component: BlockInfo },
   { path: "/sandychain/blockchain/txinfo", component: TxInfo },
   { path: "/sandychain/blockchain/netinfo", component: NetInfo },
